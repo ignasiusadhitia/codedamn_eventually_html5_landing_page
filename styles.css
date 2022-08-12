@@ -1,0 +1,186 @@
+:root {
+  --black: #000000;
+  --green: #1cb495;
+  --white: #ffffff;
+  --grey: #acacac;
+  --bg-overlay: rgba(0, 0, 0, 0.85);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  font-family: Roboto, sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  line-height: 26.4px;
+  color: var(--grey);
+  background: url("/assets/images/bg01.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center left;
+}
+
+h1 {
+  font-size: 52px;
+  line-height: 65px;
+  font-style: normal;
+  color: var(--white);
+}
+
+a {
+  color: var(--grey);
+  text-decoration-style: dotted;
+}
+
+ul {
+  padding-left: 0;
+  display: flex;
+  gap: 15px;
+  list-style: none;
+}
+
+main {
+  height: 100%;
+}
+
+main #overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: var(--bg-overlay);
+}
+
+main > #container {
+  height: 100%;
+  margin: 0 55px;
+  position: relative;
+}
+
+main > #container #inner-container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+main > #container > #inner-container > #hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-grow: 1;
+}
+
+main > #container > #inner-container > #hero p {
+  margin: 35px 0;
+  font-size: 22px;
+  line-height: 1.6;
+  letter-spacing: -0.2px;
+}
+
+main > #container > #inner-container > #hero form {
+  display: flex;
+  gap: 20px;
+}
+
+main > #container > #inner-container > #hero > form #email,
+#submit {
+  padding: 10px 18px;
+  border-radius: 5px;
+  font-size: 15px;
+  line-height: 20px;
+}
+
+main > #container > #inner-container > #hero > form #email {
+  width: 288px;
+  background: transparent;
+  border: 1px solid var(--grey);
+}
+
+main > #container > #inner-container > div > form #submit {
+  background: var(--green);
+  color: var(--white);
+  border: none;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+main > #container > #inner-container > #hero > form #submit:hover {
+  opacity: 0.9;
+}
+
+main > #container > #inner-container > #hero #thank-you-message {
+  margin-top: 10px;
+  color: var(--green);
+  display: none;
+}
+
+main > #container > #inner-container #footer {
+  position: fixed;
+  bottom: 55px;
+}
+
+main > #container > #inner-container > #footer {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+main > #container > #inner-container > #footer ul {
+  display: flex;
+  gap: 20px;
+  line-height: 0;
+}
+
+main > #container > #inner-container > #footer > ul > li i {
+  font-size: 20px;
+}
+
+main > #container > #inner-container > #footer div {
+  font-size: 12px;
+  letter-spacing: 0.35px;
+}
+
+@media screen and (max-width: 768px) {
+  body {
+    background-size: 490%;
+    background-position: 45% bottom;
+  }
+
+  main > #container {
+    margin: 0 30px;
+  }
+  main > #container > #inner-container > #hero h1,
+  p {
+    display: none;
+  }
+
+  main > #container > #inner-container > #hero form {
+    margin-top: 10px;
+    width: 100%;
+    flex-direction: column;
+    font-size: 14px;
+  }
+
+  main > #container > #inner-container > #hero > form #email,
+  #submit {
+    width: auto;
+  }
+
+  main > #container > #inner-container #footer {
+    bottom: 28px;
+  }
+
+  main > #container > #inner-container > #footer {
+    gap: 12px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  body {
+    background-size: 149%;
+  }
+}

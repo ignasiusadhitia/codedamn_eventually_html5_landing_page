@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Eventually HTML5 Landing Page</title>
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+
+<body>
+  <main>
+    <section id="overlay"></section>
+    <section id="container">
+      <div id="inner-container">
+        <div id="hero">
+          <h1>Eventually</h1>
+          <p>
+            A simple template for telling the world when you'll launch
+            <br />
+            your next big thing. Brought to you by <a href="#"><span>HTML5 UP.</span></a>
+          </p>
+          <form onsubmit="thankYou(event)">
+            <input type="email" placeholder="Email Address" id="email" required />
+            <input type="submit" id="submit" value="Sign Up" />
+
+          </form>
+          <span id="thank-you-message">&#9647; Thank you!</span>
+        </div>
+
+        <div id="footer">
+          <ul>
+            <li><i class="fa-brands fa-twitter"></i></li>
+            <li><i class="fa-brands fa-instagram"></i></li>
+            <li><i class="fa-brands fa-github"></i></li>
+            <li><i class="fa-regular fa-envelope"></i></li>
+
+          </ul>
+          <div>
+            <span>&copy; Untitled.&nbsp;&nbsp;|&nbsp;&nbsp;Credits: <a href="#"><span>Unsplash</span></a><span> +
+              </span><a href="#"><span>HTML 5UP</span></a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <script src="https://kit.fontawesome.com/d5b49b62a2.js" crossorigin="anonymous"></script>
+  <script>
+    function thankYou(event) {
+      event.preventDefault();
+      document.getElementById("thank-you-message").style.display = "block";
+    }
+  </script>
+</body>
+
+</html>
